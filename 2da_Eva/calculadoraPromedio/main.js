@@ -1,7 +1,7 @@
 // Si el usuario introduce 1, 2 -> OK
 // Si el usuario introduce "" -> Error: no has introducido ningún número.
 // Si el usuario no lo separa por comas: Error: los elementos deben estar separados por comas.
-// si el usuario itroduce los numeros como palabras -> Error: has introducido un elemento que no es un número.
+// si el usuario introduce los números como palabras -> Error: has introducido un elemento que no es un número.
 
 const elementoResultado = document.getElementById("resultado");
 
@@ -42,7 +42,7 @@ calculo.onclick = function () {
         const resultado = calcularPromedio(decimales);
     
         // Mostrar el resultado y registrar en consola
-        console.log("Resultado calculado:", resultado);
+        //console.log("Resultado calculado:", resultado);
         elementoResultado.innerText = resultado;
     }
 }
