@@ -45,6 +45,20 @@ label {
     flex-wrap: wrap;
 }
 
+label.inlineLabel {
+    display: flex;
+    margin-bottom: 10px;
+    color: #444;
+    font-weight: 500;
+    flex-direction: row-reverse;
+    align-items: stretch;
+    justify-content: center;
+    align-content: space-between;
+    flex-wrap: nowrap;
+
+}
+
+
 input, select, button {
     width: 100%;
     padding: 10px;
@@ -53,6 +67,10 @@ input, select, button {
     border: 1px solid #ccc;
     border-radius: 6px;
     box-sizing: border-box;
+}
+
+label.inlineLabel > input {
+    width: 10%;
 }
 
 button {
