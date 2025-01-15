@@ -94,3 +94,22 @@ button.completar:hover {
 .completada {
     background-color: rgb(0 199 65);
 }
+
+#mensaje {
+    display: none;
+    text-align: center;
+    padding: 10px;
+    background-color: #f7f4ef;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 5px;
+    width: 100%;
+    max-width: 350px;
+    margin: 10px auto;
+    box-shadow: 1px 1px 1px;
+    font-family: monospace;
+    font-size: 1.25em;
+}

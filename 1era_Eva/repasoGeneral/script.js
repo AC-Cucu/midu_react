@@ -9,49 +9,64 @@ function agregarTareas() {
     let tarea = document.createElement("div");
     //tarea.textContent = "Nueva tarea";
 
+    let elementoMensaje = document.getElementById("mensaje");
+    let textoMensaje = document.createElement("p");
+
     //Pedir al usuario el texto que llevará cada tarea
     let textoTarea = prompt("Añade el texto de la tarea");
     console.log("Valor introducido por el usuario: ", textoTarea);
 
-    tarea.textContent = textoTarea;
+    // Comprobar que la tarea no esté vacia
+    if (textoTarea === '' || textoTarea.length === 0) {
+        elementoMensaje.style.display = "flex";
 
-    //Añadir una clase llamada "tarea"
-    tarea.className = "tarea";
+        let mensaje = "¡El nombre de la tarea no puede estar vacío!";
+        textoMensaje.textContent = mensaje;
 
-    console.log("nuevo elemento div:", tarea);    
- 
-
-    //Añadir un nuevo elemento button a la variable tarea, antes de añadirla a la lista
-    let botonEliminar = document.createElement("button");
-    botonEliminar.textContent = "Eliminar tarea";
-    botonEliminar.className = "eliminar";
-
-    console.log("nuevo boton para eliminar tarea: ", botonEliminar);
-
-    //Asignar al click del boton eliminar, la función "eliminarTarea"
-    botonEliminar.onclick = function () {
-        eliminarTarea(this);
+        elementoMensaje.appendChild(textoMensaje);
     }
+    // Si no está vacia, realizar todos los pasos de la función
+    else {
+        tarea.textContent = textoTarea;
 
-    // Añadir un nuevo botón que invoque una función que asigne un color de fondo verde a la tarea
-    //Añadir un nuevo elemento button a la variable tarea, antes de añadirla a la lista
-    let botonCompletar = document.createElement("button");
-    botonCompletar.textContent = "Completar tarea";
-    botonCompletar.className = "completar";
-
-    console.log("nuevo boton para eliminar tarea: ", botonCompletar);
-
-    //Asignar al click del boton eliminar, la función "eliminarTarea"
-    botonCompletar.onclick = function () {
-        completarTarea(this);
-    }
-
-    // ** Los append child siempre recomendado al final de nuestra función
-    tarea.appendChild(botonEliminar);
-    tarea.appendChild(botonCompletar);
-
-    //A la variable "listaTareas" añadir como elemento hijo la variable "tarea"
-    listaTareas.appendChild(tarea);
+        //Añadir una clase llamada "tarea"
+        tarea.className = "tarea";
+    
+        console.log("nuevo elemento div:", tarea);    
+     
+    
+        //Añadir un nuevo elemento button a la variable tarea, antes de añadirla a la lista
+        let botonEliminar = document.createElement("button");
+        botonEliminar.textContent = "Eliminar tarea";
+        botonEliminar.className = "eliminar";
+    
+        console.log("nuevo boton para eliminar tarea: ", botonEliminar);
+    
+        //Asignar al click del boton eliminar, la función "eliminarTarea"
+        botonEliminar.onclick = function () {
+            eliminarTarea(this);
+        }
+    
+        // Añadir un nuevo botón que invoque una función que asigne un color de fondo verde a la tarea
+        //Añadir un nuevo elemento button a la variable tarea, antes de añadirla a la lista
+        let botonCompletar = document.createElement("button");
+        botonCompletar.textContent = "Completar tarea";
+        botonCompletar.className = "completar";
+    
+        console.log("nuevo boton para eliminar tarea: ", botonCompletar);
+    
+        //Asignar al click del boton eliminar, la función "eliminarTarea"
+        botonCompletar.onclick = function () {
+            completarTarea(this);
+        }
+    
+        // ** Los append child siempre recomendado al final de nuestra función
+        tarea.appendChild(botonEliminar);
+        tarea.appendChild(botonCompletar);
+    
+        //A la variable "listaTareas" añadir como elemento hijo la variable "tarea"
+        listaTareas.appendChild(tarea);        
+    }  
 }
 
 // Seleccionar el elemento con id "agregarTarea"
