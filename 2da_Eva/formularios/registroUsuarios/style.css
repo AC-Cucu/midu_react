@@ -1,0 +1,81 @@
+/* Estilos globales */
+body {
+    font-family: 'Roboto', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #f3f4f7, #e3e6ed);
+    min-height: 100vh;
+}
+
+/* 
+Aplica los siguientes estilos al formulario (3 puntos): 
+
+	
+
+	
+	
+ - Aplica estilos al botón de enviar:
+	- Fondo azul;
+	- Texto blanco;
+	- Cambia el fondo a un azul más oscuro cuando el ratón pase sobre el botón (:hover);
+	
+ 
+*/
+
+/* Asigna un ancho máximo de 550px al formulario y centralo en la página. */
+#registerForm {
+	max-width: 550px;	
+	display: flex;
+	flex-direction: column;
+	margin: auto;
+}
+
+/* - Estilo para los <fieldset>: 
+- bordes redondeados;
+- un margen entre secciones;
+- un fondo claro; */
+
+fieldset {
+	border-radius: 5px;
+	margin: 10px;
+	background-color: #f0f8ff;
+}
+
+/* Para los <input>, <textarea>, y <select>:
+- Añade padding interno;
+- Bordes redondeados;
+- Cambia el color del borde al enfocar el campo (estado :focus); 
+*/
+input, textarea, select {
+	padding: 5px;
+	border-radius: 10px;
+}
+
+input:focus, textarea:focus, select:focus {
+	border-color: burlywood;
+}
+/* - Aplica estilos al botón de enviar:
+- Fondo azul;
+- Texto blanco;
+- Cambia el fondo a un azul más oscuro cuando el ratón pase sobre el botón (:hover); */
+input[type="submit"], button[type="submit"] {
+	background-color: #0084ff;
+	color: white;
+}
+input[type="submit"]:hover, button[type="submit"]:hover {
+	background-color: #065aa8;
+}
+
+/* - Para las etiquetas <label>: 
+- Usa un color que contraste bien con el fondo;
+- Tamaño de fuente 14px; */
+label {
+	color: black;
+	font-size: 14px;
+}
+
+
+/* Crea una clase y asignasela tanto al header como al footer y aplica una unica regla para centrar el texto  */
+.centerText {
+	text-align: center;
+}
