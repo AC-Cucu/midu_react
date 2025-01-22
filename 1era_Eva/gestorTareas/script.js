@@ -23,10 +23,25 @@ function agregarTareas() {
         let mensaje = "¡El nombre de la tarea no puede estar vacío!";
         textoMensaje.textContent = mensaje;
 
-        elementoMensaje.appendChild(textoMensaje);
+        let hijosMensaje = elementoMensaje.children;
+        // console.log("Hijos elementoMensaje: ", elementoMensaje.children);
+
+        // Comprobar que no tengamos un elemento ya con el mismo texto para no crear duplicidades en el recuadro del mensaje
+        if (hijosMensaje.length !== 0) {
+            for (let index = 0; index < hijosMensaje.length; index++) {
+                if (textoMensaje.textContent != hijosMensaje[index].textContent) {
+                    elementoMensaje.appendChild(textoMensaje);
+                }
+            }
+        }
+        else {
+            elementoMensaje.appendChild(textoMensaje);
+        }
     }
     // Si no está vacia, realizar todos los pasos de la función
     else {
+        elementoMensaje.style.display = "none";
+
         tarea.textContent = textoTarea;
 
         //Añadir una clase llamada "tarea"
@@ -65,7 +80,23 @@ function agregarTareas() {
         tarea.appendChild(botonCompletar);
     
         //A la variable "listaTareas" añadir como elemento hijo la variable "tarea"
-        listaTareas.appendChild(tarea);        
+
+        // Comprobar que no tengamos una tarea ya con el mismo texto para no crear duplicidades en la lista de tareas
+        let hijosListaTareas = listaTareas.children;
+        // console.log("Hijos hijosListaTareas: ", hijosListaTareas);
+
+        if (hijosListaTareas.length !== 0) {
+            // for (let index = 0; index < hijosListaTareas.length; index++) {
+                // if (tarea.innerHTML != hijosListaTareas[index].innerHTML) {
+            if (!hijosListaTareas.includes(tarea)) {
+                listaTareas.appendChild(tarea);
+            }
+            // }
+        }
+        else {
+            listaTareas.appendChild(tarea);
+        }
+        
     }  
 }
 
@@ -98,4 +129,21 @@ function completarTarea (elementoBoton) {
 
     //Añadir la clase con el fondo verde al elemento padre del botón
     elementoPadre.classList.add("completada");
+}
+
+
+function inArray(target, array)
+{
+
+/* Caching array.length doesn't increase the performance of the for loop on V8 (and probably on most of other major engines) */
+
+  for(var i = 0; i < array.length; i++) 
+  {
+    if(array[i] === target)
+    {
+      return true;
+    }
+  }
+
+  return false; 
 }
