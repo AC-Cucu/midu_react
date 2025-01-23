@@ -25,5 +25,10 @@ formulario.onsubmit = function (event) {
     generoM.checked;
     generoF.checked;
     generoO.checked;
-    console.log("Género masculino: ", );
+    movies.checked;
+    sports.checked;
+    music.checked;
+    tech.checked;
+    country.children;
+    comments.value;
 }
