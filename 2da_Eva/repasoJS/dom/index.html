@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Repaso JS</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="dom.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Reservas Hotel Prometeo</h1>
+    </header>    
+    <main>
+        <form>
+            <fieldset>
+              <legend>Reserva de Hotel</legend>
+              
+              <label for="nombre">Nombre del huésped:</label>
+              <input type="text" id="nombre" placeholder="Escribe tu nombre" required>
+              
+              <label for="checkin">Fecha de entrada:</label>
+              <input type="date" id="checkin" required>
+              
+              <label for="checkout">Fecha de salida:</label>
+              <input type="date" id="checkout" required>
+              
+              <label for="tipo_habitacion">Tipo de habitación:</label>
+              <select id="tipo_habitacion">
+                <option value="individual">Individual</option>
+                <option value="doble">Doble</option>
+                <option value="suite">Suite</option>
+              </select>
+              
+              <label for="huespedes">Número de huéspedes:</label>
+              <input type="number" id="huespedes" min="1" max="10" required>
+              
+              <label class="inlineLabel">
+                <input type="checkbox" required> Acepto los términos y condiciones
+              </label>
+              
+              <button type="submit">Reservar</button>
+            </fieldset>
+          </form>
+    </main>
+    <footer>
+          <h3>Prometeo DAW 2025</h3>
+    </footer>
+</body>
+</html>
