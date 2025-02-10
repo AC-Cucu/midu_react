@@ -11,3 +11,39 @@
         **Podeis utilizar <!CDATA[]> dentro de las etiquetas por si quereis escapar algún dato en concreto
  -->
 
+
+<catalogo 
+    xmlns="http://w3schools.com"
+    xmlns:xsi="https://w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="./catalogoSchema.xml"
+>    
+    <producto categoria="" disponible="">
+        <nombre></nombre>
+        <precio></precio>
+        <descripcion></descripcion>
+    </producto>
+
+    <producto categoria="" disponible="">
+        <nombre></nombre>
+        <precio></precio>
+        <descripcion></descripcion>
+    </producto>
+
+    <producto categoria="" disponible="">
+        <nombre></nombre>
+        <precio></precio>
+        <descripcion></descripcion>
+    </producto>  
+
+    <producto categoria="" disponible="">
+        <nombre></nombre>
+        <precio></precio>
+        <descripcion></descripcion>
+    </producto>   
+
+    <producto categoria="" disponible="">
+        <nombre></nombre>
+        <precio></precio>
+        <descripcion></descripcion>
+    </producto>                 
+</catalogo>
