@@ -1,0 +1,16 @@
+<!-- Este es el elemento prolog, se usa para indicar la version y la codificación de nuestro XML -->
+<!-- Debe ser siempre la 1era línea de nuestro XML (con estos comentarios aqui daría error) -->
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- Podemos crear las etiquetas que queramos, no están predefinidad a diferencia de HTML -->
+<!-- El elemento "padre" no puede repetirse, los que estén dentro de ese elemento padre, sí. -->
+<persona>
+    <!-- Los comentarios son iguales que en HTML -->
+    <!-- Mi primo Juan -->
+
+    <!-- Podemos añadir cualquier atributo a nuestras etiquetas pero su valor siempre debe ir entre dobles comillas -->
+    <nombre longtiud="30">Juan Perez</nombre>
+
+    <!-- Para incluir datos que no deban ser interpretados como XML utilizamos el <!CDATA> -->
+    <![CDATA[No quiero que se interprete como dato]]>
+</persona>
