@@ -6,13 +6,13 @@
             <xs:sequence>
                 <xs:element name="producto">
                     <xs:complexType>
-                        <xs:attribute name="categoria" type="xs:string" use="required" />
-                        <xs:attribute name="disponibilidad" type="xs:string"/>
                         <xs:sequence>
                             <xs:element name="nombre" type="xs:string"/>
                             <xs:element name="precio" type="xs:string"/>
                             <xs:element name="descripcion" type="xs:string"/>
                         </xs:sequence>
+                        <xs:attribute name="categoria" type="xs:string" use="required" />
+                        <xs:attribute name="disponibilidad" type="xs:string"/>                        
                     </xs:complexType>
                 </xs:element>
             </xs:sequence>
