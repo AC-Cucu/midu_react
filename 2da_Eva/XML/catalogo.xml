@@ -12,10 +12,9 @@
  -->
 
 
-<catalogo 
-    xmlns="http://w3schools.com"
+<catalogo     
     xmlns:xsi="https://w3.org/2001/XMLSchema-instance"
-    xsi:schemaLocation="./catalogoSchema.xml"
+    xsi:noNamespaceSchemaLocation="./catalogoSchema.xml"
 >    
     <producto categoria="" disponible="">
         <nombre></nombre>
