@@ -14,7 +14,7 @@
 
 <catalogo     
     xmlns:xsi="https://w3.org/2001/XMLSchema-instance"
-    xsi:noNamespaceSchemaLocation="./catalogoSchema.xml"
+    xsi:noNamespaceSchemaLocation="./catalogoSchema.xsd"
 >    
     <producto categoria="" disponible="">
         <nombre></nombre>
