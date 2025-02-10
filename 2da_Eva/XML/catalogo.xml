@@ -1,0 +1,12 @@
+
+<!-- 
+    Nuevo XML con el elemento padre catalogo:
+        El catalogo contendrá productos (al menos 5) con la siguiente información:
+            - nombre
+            - precio
+            - descripcion
+            - categoria (como atributo)
+            - disponible (como atributo)
+        *Incluye comentarios para cada sección
+        **Podeis utilizar <!CDATA[]> dentro de las etiquetas por si quereis escapar algún dato en concreto
+ -->
