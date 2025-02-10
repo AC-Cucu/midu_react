@@ -3,17 +3,19 @@
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
     <xs:element name="catalogo">
         <xs:complexType>
-            <xs:element name="producto">
-                <xs:attribute name="categoria" type="xs:string" use="required"> </xs:attribute>
-                <xs:attribute name="disponibilidad" type="xs:string"> </xs:attribute>
-                <xs:complexType>
-                    <xs:sequence>
-                        <xs:element name="nombre" type="xs:string"/>
-                        <xs:element name="precio" type="xs:string"/>
-                        <xs:element name="descripcion" type="xs:string"/>
-                    </xs:sequence>    
-                </xs:complexType>
-            </xs:element>
+            <xs:sequence>
+                <xs:element name="producto">
+                    <xs:complexType>
+                        <xs:attribute name="categoria" type="xs:string" use="required" />
+                        <xs:attribute name="disponibilidad" type="xs:string"/>
+                        <xs:sequence>
+                            <xs:element name="nombre" type="xs:string"/>
+                            <xs:element name="precio" type="xs:string"/>
+                            <xs:element name="descripcion" type="xs:string"/>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
         </xs:complexType>
     </xs:element>
 </xs:schema>
