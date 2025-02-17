@@ -8,9 +8,23 @@
                         <xsd:sequence>
                             <xsd:element name="usuario" type="xsd:string"></xsd:element>
                             <xsd:element name="password" type="xsd:string"></xsd:element>
-                            <xsd:element name="puerto" type="xsd:int"></xsd:element>
+                            <xsd:element name="puerto">
+                                <xsd:simpleType>
+                                    <xsd:restriction base="xsd:int">
+                                        <xsd:minInclusive value="1024"></xsd:minInclusive>
+                                        <xsd:maxExclusive value="65535"></xsd:maxExclusive>
+                                    </xsd:restriction>
+                                </xsd:simpleType>
+                            </xsd:element>
                             <xsd:element name="max_conexiones" type="xsd:int"></xsd:element>
-                            <xsd:element name="modo_acceso" type="xsd:string"></xsd:element>
+                            <xsd:element name="modo_acceso" >
+                                <xsd:simpleType>
+                                    <xsd:restriction base="xsd:string">
+                                        <xsd:enumeration value="local"></xsd:enumeration>
+                                        <xsd:enumeration value="remoto"></xsd:enumeration>
+                                    </xsd:restriction>
+                                </xsd:simpleType>
+                            </xsd:element>
                         </xsd:sequence>
                         <xsd:attribute name="nombre" type="xsd:string"></xsd:attribute>
                     </xsd:complexType>
@@ -19,7 +33,15 @@
                     <xsd:complexType>
                         <xsd:sequence>
                             <xsd:element name="ruta" type="xsd:string"></xsd:element>
-                            <xsd:element name="frecuencia" type="xsd:string"></xsd:element>                        
+                            <xsd:element name="frecuencia">
+                                <xsd:simpleType>
+                                    <xsd:restriction base="xsd:string">
+                                        <xsd:enumeration value="diaria"></xsd:enumeration>
+                                        <xsd:enumeration value="semanal"></xsd:enumeration>
+                                        <xsd:enumeration value="mensual"></xsd:enumeration>
+                                    </xsd:restriction>
+                                </xsd:simpleType>                            
+                            </xsd:element>                        
                         </xsd:sequence>
                     </xsd:complexType>
                 </xsd:element>                
@@ -29,7 +51,11 @@
 </xsd:schema>
 <!-- XSD para validar nuestro XML: 
     - nombre debe ser un atributo de base de datos
+
+
     - puerto debe ser un número entre 1024 y 65535
+
+    
     - modo de acceso solo puede ser "local" o "remoto"
     - frecuencia solo puede ser "diaria", "semanal" o "mensual"
 -->
