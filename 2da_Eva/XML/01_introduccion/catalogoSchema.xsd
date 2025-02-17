@@ -4,7 +4,7 @@
     <xs:element name="catalogo">
         <xs:complexType>
             <xs:sequence>
-                <xs:element name="producto">
+                <xs:element name="producto" maxOccurs="unbounded">
                     <xs:complexType>
                         <xs:sequence>
                             <xs:element name="nombre" type="xs:string"/>
@@ -12,7 +12,7 @@
                             <xs:element name="descripcion" type="xs:string"/>
                         </xs:sequence>
                         <xs:attribute name="categoria" type="xs:string" use="required" />
-                        <xs:attribute name="disponibilidad" type="xs:string"/>                        
+                        <xs:attribute name="disponibilidad" type="xs:string"/>
                     </xs:complexType>
                 </xs:element>
             </xs:sequence>

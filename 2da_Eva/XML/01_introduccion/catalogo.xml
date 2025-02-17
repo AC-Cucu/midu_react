@@ -12,35 +12,34 @@
  -->
 
 
-<catalogo     
-    xmlns:xsi="https://w3.org/2001/XMLSchema-instance"
-    xsi:noNamespaceSchemaLocation="./catalogoSchema.xsd"
+<catalogo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:noNamespaceSchemaLocation="catalogoSchema.xsd"
 >    
-    <producto categoria="" disponible="">
+    <producto categoria="" disponibilidad="">
         <nombre></nombre>
         <precio></precio>
         <descripcion></descripcion>
     </producto>
 
-    <producto categoria="" disponible="">
+    <producto categoria="" disponibilidad="">
         <nombre></nombre>
         <precio></precio>
         <descripcion></descripcion>
     </producto>
 
-    <producto categoria="" disponible="">
+    <producto categoria="" disponibilidad="">
         <nombre></nombre>
         <precio></precio>
         <descripcion></descripcion>
     </producto>  
 
-    <producto categoria="" disponible="">
+    <producto categoria="" disponibilidad="">
         <nombre></nombre>
         <precio></precio>
         <descripcion></descripcion>
     </producto>   
 
-    <producto categoria="" disponible="">
+    <producto categoria="" disponibilidad="">
         <nombre></nombre>
         <precio></precio>
         <descripcion></descripcion>
