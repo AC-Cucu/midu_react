@@ -27,7 +27,7 @@ base_datos debe incluir:
     <modo_acceso>remoto</modo_acceso>
   </base_datos>
   <backups>
-    <ruta>/var/logs/backup</ruta>
+    <ruta>/var/backup</ruta>
     <frecuencia>semanal</frecuencia>
   </backups>
 </configuracion_servidor>
