@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<servidor>
+    <base_datos nombre="BD_Principal">
+        <usuario>pepe</usuario>
+        <password>admin1234</password>
+        <puerto>8080</puerto>
+    </base_datos>
+    <logs ruta="/var/logs/db.log"/>
+</servidor>

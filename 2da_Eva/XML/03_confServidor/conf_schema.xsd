@@ -1,0 +1,7 @@
+<!-- XSD para validar nuestro XML: 
+    - nombre debe ser unatribute de base de datos
+    - puerto debe ser un número entre 1024 y 65535
+    - modo de acceso solo puede ser "local" o "remoto"
+    - frecuencia solo puede ser "diaria", "semanal" o "mensual"
+
+-->

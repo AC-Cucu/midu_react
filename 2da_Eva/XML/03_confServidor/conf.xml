@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- XML con la configuración del servidor.
+
+configuracion_servidor:
+  |__ base_datos
+  |__ backups
+
+base_datos debe incluir:
+    - nombre de la base de datos (atributo)
+    - usuario
+    - contraseña
+    - puerto
+    - máximo de conexiones
+    - modo de acceso
+
+- seccion de backups que contenga a su vez: 
+    - ruta
+    - frecuencia
+-->
+<configuracion_servidor>
+  <!-- Configuración para la base de datos de pruebas-->
+  <base_datos nombre="BD_Pruebas">
+    <usuario>pepe</usuario>
+    <password> <![CDATA[admin1234]]></password>
+    <puerto>3000</puerto>
+    <max_conexiones>1000</max_conexiones>
+    <modo_acceso>remoto</modo_acceso>
+  </base_datos>
+  <backups>
+    <ruta>/var/logs/backup</ruta>
+    <frecuencia>semanal</frecuencia>
+  </backups>
+</configuracion_servidor>
