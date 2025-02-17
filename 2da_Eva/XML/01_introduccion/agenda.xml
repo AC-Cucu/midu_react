@@ -17,22 +17,21 @@ para incluir el atributo genero en los contactos -->
 ]>
 
 <agenda>
-    <contacto>
+    <contacto genero="H">
         <nombre>Pepe</nombre>
         <correo>pepe@mail.com</correo>
         <telefono prefijo="+46">111222333</telefono>
     </contacto>
 
-    <contacto>
+    <contacto genero="H">
         <nombre>Michael</nombre>
         <correo>mick@mail.com</correo>
-        <telefono>555888222</telefono>
+        <telefono prefijo="+88">555888222</telefono>
     </contacto>
 
-    <contacto>
+    <contacto genero="H">
         <nombre>Raphael</nombre>
         <correo>raphael@mail.com</correo>
         <telefono prefijo="+44">555666333</telefono>
     </contacto>        
 </agenda>
-
