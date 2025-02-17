@@ -17,7 +17,10 @@ base_datos debe incluir:
     - ruta
     - frecuencia
 -->
-<configuracion_servidor>
+<configuracion_servidor
+    xmlns:xsi="https://w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="./conf_schema.xsd"
+>
   <!-- Configuración para la base de datos de pruebas-->
   <base_datos nombre="BD_Pruebas">
     <usuario>pepe</usuario>
