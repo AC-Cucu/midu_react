@@ -17,15 +17,21 @@ base_datos debe incluir:
     - ruta
     - frecuencia
 -->
-<configuracion_servidor
-    xmlns:xsi="https://w3.org/2001/XMLSchema-instance"
-    xsi:noNamespaceSchemaLocation="./conf_schema.xsd"
->
+<configuracion_servidor xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:noNamespaceSchemaLocation="conf_schema.xsd">
   <!-- Configuración para la base de datos de pruebas-->
   <base_datos nombre="BD_Pruebas">
     <usuario>pepe</usuario>
     <password> <![CDATA[admin1234]]></password>
-    <puerto>3000</puerto>
+    <puerto>3010</puerto>
+    <max_conexiones>1000</max_conexiones>
+    <modo_acceso>remoto</modo_acceso>
+  </base_datos>
+  <!-- Configuración para la base de datos de producción-->
+  <base_datos nombre="BD_Produccion">
+    <usuario>pepe</usuario>
+    <password> <![CDATA[prod1234]]></password>
+    <puerto>3011</puerto>
     <max_conexiones>1000</max_conexiones>
     <modo_acceso>remoto</modo_acceso>
   </base_datos>

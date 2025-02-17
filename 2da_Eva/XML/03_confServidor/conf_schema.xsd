@@ -3,7 +3,7 @@
     <xsd:element name="configuracion_servidor">
         <xsd:complexType>
             <xsd:sequence>
-                <xsd:element name="base_datos">
+                <xsd:element name="base_datos" maxOccurs="unbounded">
                     <xsd:complexType>
                         <xsd:sequence>
                             <xsd:element name="usuario" type="xsd:string"></xsd:element>
