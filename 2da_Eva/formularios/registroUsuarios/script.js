@@ -19,12 +19,24 @@ let comments = document.getElementById("comments");
 
 formulario.onsubmit = function (event) {
     event.preventDefault();
+    //Mostrar un alert si el nombre o email están vacios
     nombre.value;
     email.value;
+
+    if (String(nombre.value).trim() === '') {
+        alert("¡El nombre no puede estar vacío!");
+        nombre.className+= '';
+    }
+    if (String(email.value).trim() === '') {
+        alert("¡El email no puede estar vacío!");
+    }
+
     birthdate.value;
+    //Si ninguna de las tres variables de genero están marcadas, seleccionar una por defecto
     generoM.checked;
     generoF.checked;
     generoO.checked;
+    
     movies.checked;
     sports.checked;
     music.checked;
