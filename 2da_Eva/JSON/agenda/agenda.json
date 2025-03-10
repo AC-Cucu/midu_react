@@ -1,0 +1,23 @@
+{
+    // Hemos convertido el XML a JSON, 
+    // si quisieramos añadir el atributo "genero" habría que añadirlo como un atributo más en nuestro JSON
+    "agenda": {
+      "contacto": [
+        {
+          "nombre": "Pepe",
+          "correo": "pepe@mail.com",
+          "telefono": 111222333
+        },
+        {
+          "nombre": "Michael",
+          "correo": "mick@mail.com",
+          "telefono": 555888222
+        },
+        {
+          "nombre": "Raphael",
+          "correo": "raphael@mail.com",
+          "telefono": 555666333
+        }
+      ]
+    }
+}
