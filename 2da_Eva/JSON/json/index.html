@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manipulación de JSON en el Navegador</title>
+    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header id="header">
+        <h1>Manipulación de JSON en el Navegador</h1>
+    </header>
+
+    <div class="card">
+        <button type="button" onclick="mostrarBaseDatos()">Mostrar Bases de Datos</button>
+        <button type="button" onclick="mostrarBackups()">Mostrar Configuración de Backups</button>
+        <button type="button" onclick="listarNombresBD()">Listar Nombres de Bases de Datos</button>
+        <button type="button" onclick="modificarUsuario()">Modificar Usuario de BD_Pruebas</button>
+
+        <div id="mostrarResultado">
+            <h3>Resultado:</h3>
+            <pre id="resultado"></pre>
+        </div>
+    </div>
+
+    <footer class="footer">
+        &copy; 2025 Prometeo
+    </footer>
+</body>
+</html>

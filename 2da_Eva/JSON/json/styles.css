@@ -1,0 +1,55 @@
+body {
+    background-color: #F5F5F5;
+    color: #212121;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    padding: 20px;
+}
+
+header {
+    background-color: #bff75e;
+    color: white;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+
+button {
+    background-color: #e3e3e3;
+    color: #1e3740;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin: 10px;
+}
+
+button:hover {
+    background-color: #f3efef;
+}
+
+.card {
+    background-color: white;
+    border: 1px solid #E0E0E0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    padding: 20px;
+    margin: 20px auto;
+    width: 80%;
+    text-align: left;
+}
+
+#mostrarResultado {
+    display: none;
+}
+
+.footer {
+    background-color: #1e3740;
+    color: #F5F5F5;
+    text-align: center;
+    padding: 15px;
+    margin-top: 20px;
+    border-radius: 8px;
+    cursor: pointer;
+}
