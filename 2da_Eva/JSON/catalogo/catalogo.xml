@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<catalogo>    
+    <producto categoria="" disponibilidad="">
+        <nombre></nombre>
+        <precio></precio>
+        <descripcion></descripcion>
+    </producto>
+
+    <producto categoria="" disponibilidad="">
+        <nombre></nombre>
+        <precio></precio>
+        <descripcion></descripcion>
+    </producto>
+
+    <producto categoria="" disponibilidad="">
+        <nombre></nombre>
+        <precio></precio>
+        <descripcion></descripcion>
+    </producto>  
+
+    <producto categoria="" disponibilidad="">
+        <nombre></nombre>
+        <precio></precio>
+        <descripcion></descripcion>
+    </producto>   
+
+    <producto categoria="" disponibilidad="">
+        <nombre></nombre>
+        <precio></precio>
+        <descripcion></descripcion>
+    </producto>                 
+</catalogo>
