@@ -22,4 +22,4 @@ function registerUser() {
     console.log(elementosValidaciones);
 }
 
-btnRegister.onclick = registerUser();
+btnRegister.onclick = registerUser;
