@@ -1,0 +1,55 @@
+<?xml version="1.0"?>
+<!-- 
+Crea un archivo configuracion_web.xml con la información de un sitio web:
+    Nombre del sitio
+    Dominio
+    Tecnologías utilizadas (tecnologías contendra varios elementos tecnología. 
+                            Por ejemplo: HTML, CSS, JavaScript, Node.js)
+    Secciones del sitio (secciones contendra varios elementos seccion. Por ejemplo: Inicio, Blog, Contacto)
+    Configuración del servidor (puerto y base de datos)
+-->
+
+<!-- Doctype directamente en el XML -->
+<!-- <!DOCTYPE configuracion_web [
+    <!ELEMENT configuracion_web (sitio+)>
+    <!ELEMENT sitio (nombre, dominio, tecnologias, secciones, configuracion_servidor)>
+    <!ELEMENT nombre (#PCDATA)>
+    <!ELEMENT dominio (#PCDATA)>
+    <!ELEMENT tecnologias (tecnologia+)>
+    <!ELEMENT tecnologia (#PCDATA)>
+    <!ELEMENT secciones (seccion+)>
+    <!ELEMENT seccion (#PCDATA)>
+    <!ELEMENT configuracion_servidor (puerto, base_datos)>
+    <!ELEMENT puerto (#PCDATA)>
+    <!ELEMENT base_datos (#PCDATA)>
+]> -->
+
+<!-- Enlazar DTD local -->
+<!-- <!DOCTYPE configuracion_web SYSTEM "configuracion_web.dtd"> -->
+
+<!-- Enlazar XSD local como xsi -->
+<!-- <configuracion_web xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:noNamespaceSchemaLocation="configuracion_web.xsd"> -->
+
+ <!-- Enlazar XSD local como XML Model -->
+<?xml-model href="configuracion_web.xsd"?>
+<configuracion_web>
+    <sitio>
+        <nombre>CucuSoft</nombre>
+        <dominio>www.cucusoft.com</dominio>
+        <tecnologias>
+            <tecnologia>HTML</tecnologia>
+            <tecnologia>JS</tecnologia>
+            <tecnologia>Node.js</tecnologia>
+        </tecnologias>
+        <secciones>
+            <seccion>Inicio</seccion>
+            <seccion>Blog</seccion>
+            <seccion>Contacto</seccion>
+        </secciones>
+        <configuracion_servidor>
+            <puerto>8080</puerto>
+            <base_datos>PostgreSQL</base_datos>
+        </configuracion_servidor>    
+    </sitio>
+</configuracion_web>

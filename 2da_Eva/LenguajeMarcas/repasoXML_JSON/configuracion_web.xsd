@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wuewue:schema xmlns:wuewue="http://www.w3.org/2001/XMLSchema">
+    <wuewue:element name="configuracion_web">
+        <wuewue:complexType>
+            <wuewue:sequence>
+                <wuewue:element name="sitio" maxOccurs="unbounded">
+                    <wuewue:complexType>
+                        <wuewue:sequence>
+                            <wuewue:element name="nombre" type="wuewue:string"/>
+                            <wuewue:element name="dominio" type="wuewue:string"/>
+                            <wuewue:element name="tecnologias">
+                                <wuewue:complexType>
+                                    <wuewue:sequence>
+                                        <wuewue:element name="tecnologia" type="wuewue:string" maxOccurs="unbounded"/>
+                                    </wuewue:sequence>
+                                </wuewue:complexType>
+                            </wuewue:element>
+                            <wuewue:element name="secciones">
+                                <wuewue:complexType>
+                                    <wuewue:sequence>
+                                        <wuewue:element name="seccion" type="wuewue:string" maxOccurs="unbounded"/>
+                                    </wuewue:sequence>
+                                </wuewue:complexType>
+                            </wuewue:element>
+                            <wuewue:element name="configuracion_servidor">
+                                <wuewue:complexType>
+                                    <wuewue:sequence>
+                                        <wuewue:element name="puerto" type="wuewue:string"/>
+                                        <wuewue:element name="base_datos" type="wuewue:string"/>
+                                    </wuewue:sequence>
+                                </wuewue:complexType>
+                            </wuewue:element>                            
+                        </wuewue:sequence>
+                    </wuewue:complexType>
+                </wuewue:element>
+            </wuewue:sequence>
+        </wuewue:complexType>
+    </wuewue:element>
+</wuewue:schema>
