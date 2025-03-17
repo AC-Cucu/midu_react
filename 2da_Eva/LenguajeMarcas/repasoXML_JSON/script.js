@@ -18,7 +18,7 @@ cabecera.onclick = function () {
 }
 
 //Leer el archivo JSON local
-fetch('assets/cofiguracion_web.json')
+fetch('assets/configuracion_web.json')
     .then(function(response) {
         response.json()
         .then(function (data) {
@@ -33,7 +33,7 @@ fetch('assets/cofiguracion_web.json')
 
 //Función para mostrar la estructura completa del JSON
 function mostrarContenido() {
-    let contenidoJSON = datosConfig.configuracion;
+    let contenidoJSON = datosConfig.configuracion_web;
 
     resultado.textContent = JSON.stringify(contenidoJSON, null, 2);
 

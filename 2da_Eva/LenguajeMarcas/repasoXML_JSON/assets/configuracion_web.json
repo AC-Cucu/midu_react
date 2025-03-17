@@ -1,24 +1,26 @@
 {
-     "sitio": {
-          "nombre": "CucuSoft",
-          "dominio": "www.cucusoft.com",
-          "tecnologias": {
-               "tecnologia": [
-                    "HTML",
-                    "CSS",
-                    "JS"
-               ]
-          },
-          "secciones": {
-               "seccion": [
-                    "Inicio",
-                    "Blog",
-                    "Contacto"
-               ]
-          },
-          "configuracion_servidor": {
-               "puerto": 8080,
-               "base_datos": "PostgreSQL"
+     "configuracion_web":[
+          {
+               "nombre": "CucuSoft",
+               "dominio": "www.cucusoft.com",
+               "tecnologias": {
+                    "tecnologia": [
+                         "HTML",
+                         "CSS",
+                         "JS"
+                    ]
+               },
+               "secciones": {
+                    "seccion": [
+                         "Inicio",
+                         "Blog",
+                         "Contacto"
+                    ]
+               },
+               "configuracion_servidor": {
+                    "puerto": 8080,
+                    "base_datos": "PostgreSQL"
+               }
           }
-     }
+     ]
 }
