@@ -12,7 +12,7 @@ formulario.onsubmit = function (event) {
     let errorMessage = document.getElementById("errorMessage");
     errorMessage.textContent = "";
     
-    // Error 1: Validación incorrecta de mensaje
+    // Error 1: Validación incorrecta de mensaje   
 
 
     
