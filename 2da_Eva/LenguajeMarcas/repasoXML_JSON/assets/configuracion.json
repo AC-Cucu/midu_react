@@ -1,0 +1,14 @@
+{
+    "configuracion": [
+        {
+            "nombre":"Valve",
+            "dominio":"www.valve.com",
+            "tecnologias": ["Angular", "TypeScript", "GO"],
+            "secciones": ["Home", "News", "About"],
+            "servidor": {
+                "puerto": 3010,
+                "bbdd": "SQL Server"
+            }
+        }
+    ]
+}
