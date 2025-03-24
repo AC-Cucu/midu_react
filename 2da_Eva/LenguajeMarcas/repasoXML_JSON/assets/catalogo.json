@@ -1,0 +1,42 @@
+{
+    "catalogo": {
+        "producto": [
+            {
+                "nombre": "Portatil HP",
+                "precio": 750,
+                "descripcion": "Portatil para trabajar",
+                "categoria": "portatiles",
+                "disponibilidad": true
+            },
+            {
+                "nombre": "Portatil Lenovo",
+                "precio": 775,
+                "descripcion": "Portatil para trabajar",
+                "categoria": "portatiles",
+                "disponibilidad": true
+            },
+            {
+                "nombre": "PC sobremesa",
+                "precio": 1750,
+                "descripcion": "Equipo gaming",
+                "categoria": "PC",
+                "disponibilidad": true
+            },
+            {
+                "nombre": "PC Office",
+                "precio": 550,
+                "descripcion": "Equipo para trabajar",
+                "categoria": "PC",
+                "disponibilidad": false
+            },
+            {
+                "nombre": "Tablet Xiaomi",
+                "precio": 350,
+                "descripcion": "Tablet multifunción",
+                "categoria": "tablets",
+                "disponibilidad": true
+            }                                        
+        ]
+    }
+
+}

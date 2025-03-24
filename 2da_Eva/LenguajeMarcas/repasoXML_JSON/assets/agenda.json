@@ -1,0 +1,24 @@
+[
+    {
+      "nombre": "Pepe",
+      "genero": "H",
+      "correo": "pepe@mail.com",
+      "telefono": 111222333,
+      "prefijo": "+46"
+    },
+    {
+        "nombre": "Michael",
+        "genero": "H",
+        "correo": "mick@mail.com",
+        "telefono": 111222333,
+        "prefijo": "+88"
+    },
+    {
+        "nombre": "Raphael",
+        "genero": "H",
+        "correo": "raphael@mail.com",
+        "telefono": 111222333,
+        "prefijo": "+44"
+    }
+
+]
