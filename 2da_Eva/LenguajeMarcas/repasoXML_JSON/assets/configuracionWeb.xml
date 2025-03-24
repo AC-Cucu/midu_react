@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE configuracion [
+    <!ELEMENT configuracion (sitio_web+)>
+    <!ELEMENT sitio_web (nombre, dominio, tecnologias, secciones, servidor)>
+    <!ELEMENT nombre (#PCDATA)>
+    <!ELEMENT dominio (#PCDATA)>
+    <!ELEMENT tecnologias (tecnologia+)>    
+    <!ELEMENT tecnologia (#PCDATA)>    
+    <!ELEMENT secciones (seccion+)>    
+    <!ELEMENT seccion (#PCDATA)>
+    <!ELEMENT servidor (puerto, bbdd)>  
+    <!ELEMENT puerto (#PCDATA)>
+    <!ELEMENT bbdd (#PCDATA)>
+]>
+
+<configuracion>
+    <sitio_web>
+        <nombre>Valve</nombre>
+        <dominio>www.valve.com</dominio>
+        <tecnologias>
+            <tecnologia>Angular</tecnologia>
+            <tecnologia>Typescript</tecnologia>
+            <tecnologia>GO</tecnologia>
+        </tecnologias>
+
+        <secciones>
+            <seccion>Home</seccion>
+            <seccion>News</seccion>
+            <seccion>About</seccion>
+        </secciones>
+
+        <servidor>
+            <puerto>3010</puerto>
+            <bbdd>SQL Server</bbdd>
+        </servidor>
+    </sitio_web>    
+</configuracion>
