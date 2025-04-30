@@ -56,3 +56,12 @@ class Bibliotecario {
         console.log(`Se ha añadido el libro ${titulo} (ISBN: ${ISBN}, autor: ${autor})`);
     }
 }
+
+const user = new Usuario(1, 'John');
+const book = new Libro('123456', 'Blacksad', 'Michael Turturo');
+const bookKeeper = new Bibliotecario('mañana');
+
+user.solicitarLibro(book);
+user.devolverLibro(book);
+
+bookKeeper.registrarLibro('98765431', 'Maus', 'John  Doe');
