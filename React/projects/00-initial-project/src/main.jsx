@@ -13,9 +13,9 @@ const root = createRoot(rootElement);
 root.render(
  <>
   <div className='App'>
-    <TwitterFollowCard />
-    <TwitterFollowCard />
-    <TwitterFollowCard />
+    <TwitterFollowCard name={"Cucu"} userName={"cucu"}/>
+    <TwitterFollowCard name={"John"} userName={"john"}/>
+    <TwitterFollowCard name={"Homer"} userName={"homer"}/>
   </div>
  </>
 )
