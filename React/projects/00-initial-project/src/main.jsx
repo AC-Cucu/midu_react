@@ -2,6 +2,8 @@ import { Fragment, StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import './index.css'
 
+import {AppRoot} from './App.jsx'
+
 const rootElement = document.getElementById('root');
 const root = createRoot(rootElement);
 
@@ -9,7 +11,6 @@ const root = createRoot(rootElement);
 
 root.render(
  <Fragment>
-  <span>Hola Mundo!!</span>
-  <span>YEEEY</span>
+  <AppRoot />
  </Fragment>
 )
