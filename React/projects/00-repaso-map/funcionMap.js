@@ -68,3 +68,46 @@ console.log("Array nuevo: ", etiquetasProducto);
 
 
 console.log("-----------------------------------");
+
+const users = [
+    {
+        firstName: "Pepito",
+        lastName: "Perez",
+        age: 33,
+        active: true
+    },
+    {
+        firstName: "Ana",
+        lastName: "Perez",
+        age: 28,
+        active: true
+    },
+    {
+        firstName: "Maria",
+        lastName: "Lopez",
+        age: 17,
+        active: false
+    }
+];
+/* Devolver un array nuevo que cada objeto tenga esta estructura:
+    {
+        id: indice_firstName_lastName,
+        fullName: firstName lastName,
+        isAdult: true o false dependiendo de la edad,
+        status: 'Active' o 'Inactive' dependiendo del campo active
+    }
+*/
+
+const finalUsers = users.map((user, index) => {
+    const {firstName, lastName, age, active} = user;
+
+    return {
+        id: `${index}_${firstName}_${lastName}`,
+        fullName: `${firstName} ${lastName}`,
+        isAdult: age > 18 ? true: false,
+        status: active ? 'Active' : 'Inactive'
+    }
+});
+
+console.log("Array original: ", users);
+console.log("Array nuevo: ", finalUsers);
