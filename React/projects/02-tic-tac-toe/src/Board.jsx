@@ -8,8 +8,8 @@ import { WinnerModal } from './components/Winner';
 import './App.css'
 
 const TURNS = {
-  X: "X",
-  O: "O"
+  X: "❌",
+  O: "⭕"
 }
 
 const WINNER_COMBOS = [
