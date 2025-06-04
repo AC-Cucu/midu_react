@@ -5,6 +5,6 @@ import Board from './Board.jsx'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <Board />
-  </StrictMode>,
+      <Board />
+  </StrictMode>
 )

@@ -3,27 +3,16 @@ import confetti from 'canvas-confetti'
 import { useState } from 'react';
 
 import { Square } from './components/Square';
-import { WinnerModal } from './components/Winner';
+import { WinnerModal } from './components/WinnerModal';
+
+import {TURNS, WINNER_COMBOS} from './logic/globalConstants'
 
 import './App.css'
 
-const TURNS = {
-  X: "❌",
-  O: "⭕"
-}
 
-const WINNER_COMBOS = [
-  [0, 1, 2],
-  [3, 4, 5],
-  [6, 7, 8],
-  [0, 3, 6],
-  [1, 4, 7],
-  [2, 5, 8],
-  [0, 4, 8],
-  [2, 4, 6]
-]
 
 function Board() {
+  console.log("render board")
   //const board = Array(9).fill(null);
   //const board = ["X", "O", "X", "X", "O", "X", "X", "O", "X"];
   const [board, setBoard] = useState(Array(9).fill(null));
@@ -96,7 +85,6 @@ function Board() {
           <section className='game'>
             {
               board.map((square, index) => {
-                  console.log("square:", square, " index:", index);
                   return(
                       <Square 
                         key={index}
