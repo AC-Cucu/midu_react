@@ -3,6 +3,13 @@
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+  gap: 1rem;
 }
 
 .logo {
@@ -43,5 +50,5 @@
 
 img {
   width: 400px;
-  height: auto;
+  height: 400px;
 }

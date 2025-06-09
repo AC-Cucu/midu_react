@@ -59,6 +59,7 @@ function App() {
       {
         imageSRC && <img src={imageSRC} alt={`Image extracted from the three words of ${fact}`}/>
       }
+      <button>Generar hecho aleatorio</button>
     </>
   )
 }
