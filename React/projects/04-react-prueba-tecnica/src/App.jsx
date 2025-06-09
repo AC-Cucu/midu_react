@@ -10,10 +10,7 @@ function App() {
   const [fact, setFact] = useState();
   const [imageSRC, setimageSRC] = useState();
 
-  // para recuperar la cita al cargar la página
-  useEffect(()=>{
-    console.log("Entro en el useEffect para la cita");
-
+  const fetchCatFact = () => {
     fetch(CAT_ENDPOINT_RANDOM)
     // Primero hacemos la llamada y duelve la promesa
     .then(respuestaPromesa => respuestaPromesa.json())
@@ -24,16 +21,9 @@ function App() {
 
       return setFact(hechoRandom)
     })
-  }, []);
+  }
 
-  // para recuperar la imagen cada vez que cambié el valor de fact
-  useEffect(()=>{
-
-    // Si no hay ninguna cita disponible todavía, no hacer nada
-    if (!fact) return
-
-    console.log("Entro en el useEffect para la imagen");
-
+  const fetchCatImage = () => {
     const firstWord = fact.split(' ', 3).join(' ');
     console.log(firstWord);
 
@@ -46,8 +36,29 @@ function App() {
       const {id, url} = data;
       return setimageSRC(url);
     });
+  }
+
+  // para recuperar la cita al cargar la página
+  useEffect(()=>{
+    console.log("Entro en el useEffect para la cita");
+
+    fetchCatFact();
+  }, []);
+
+  // para recuperar la imagen cada vez que cambié el valor de fact
+  useEffect(()=>{
+    // Si no hay ninguna cita disponible todavía, no hacer nada
+    if (!fact) return
+
+    console.log("Entro en el useEffect para la imagen");
+
+    fetchCatImage();
 
   }, [fact])  
+
+  const handleClick = () => {
+    fetchCatFact();
+  }
 
   return (
     <>
@@ -59,7 +70,7 @@ function App() {
       {
         imageSRC && <img src={imageSRC} alt={`Image extracted from the three words of ${fact}`}/>
       }
-      <button>Generar hecho aleatorio</button>
+      <button onClick={handleClick} >Generar hecho aleatorio</button>
     </>
   )
 }
