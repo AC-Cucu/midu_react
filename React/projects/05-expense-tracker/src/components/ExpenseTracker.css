@@ -143,3 +143,19 @@
     font-weight: bold;
     color: #e74c3c;
 }
+
+.et-clear-btn {
+    background: #db3458;
+    color: #fff;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+}
+
+.et-clear-btn:hover {
+    background: #eb1644;
+}

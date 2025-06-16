@@ -43,6 +43,15 @@ function ExpenseTracker () {
     }, [expenses]);
     // Se ejecuta cada vez que expenses cambia
 
+    const clearAllExpenses = () => {
+        const confimation = window.confirm("¿Estás segur@ de que quieres borrar todos los gastos?");
+
+        if (confimation) {
+            setExpenses([]);
+            localStorage.removeItem('expenses');
+        }
+    }
+
     const handleChangeDescription = (event) => {
         const valor = event?.target?.value || '';
 
@@ -197,6 +206,7 @@ function ExpenseTracker () {
                                         </div>
                                     ))
                                 }
+                                <button type='button' onClick={clearAllExpenses} className='et-clear-btn'>Limpiar todo</button>
                             </div>
                         )
                     }
