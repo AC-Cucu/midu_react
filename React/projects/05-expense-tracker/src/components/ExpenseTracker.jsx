@@ -1,6 +1,15 @@
+import { useState } from 'react'
 import './ExpenseTracker.css'
 
 function ExpenseTracker () {
+    // Estados para los campos del formulario
+    const [description, setDescription] = useState('');
+    const [amount, setAmount] = useState('');
+    const [category, setCategory] = useState('comida');
+
+    // Estado para la lista de gastos
+    const [expenses, setExpenses] = useState([]);
+
     return (
         <div className="expense-tracker">
             <header className="et-header">
