@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import './ExpenseTracker.css'
 
 function ExpenseTracker () {
@@ -9,6 +9,39 @@ function ExpenseTracker () {
 
     // Estado para la lista de gastos
     const [expenses, setExpenses] = useState([]);
+
+    useEffect(() => {
+        console.log("El componente ExpenseTracker se ha renderizado");
+
+        const savedExpenses = localStorage.getItem('expenses')
+
+        // Imtentar cargar gastos guardados
+        if (savedExpenses) {
+            try {
+                const parsedExpenses = JSON.parse(savedExpenses);
+
+                setExpenses(parsedExpenses);
+
+                console.log("Gastos cargados:", parsedExpenses);
+            } catch (error) {
+                console.error("Error al cargar los gastos:", error);
+            }
+        }
+    }, []) 
+    // Array vacío = solo se ejecuta una vez 
+    // (si estuviera el componente en un componente padre y ese se modifica esto se volvería a ejecutar)
+
+    useEffect(() => {
+        console.log("Los gastos han cambiado:", expenses);
+
+        if (expenses.length > 0) {
+            console.log("Guardando gastos en localStorage...");
+
+            const expensesJSON = JSON.stringify(expenses);
+            localStorage.setItem('expenses', expensesJSON);
+        }
+    }, [expenses]);
+    // Se ejecuta cada vez que expenses cambia
 
     const handleChangeDescription = (event) => {
         const valor = event?.target?.value || '';

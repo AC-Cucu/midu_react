@@ -6,7 +6,7 @@ export function useExpenses() {
 
   // Cargar datos al iniciar
   useEffect(() => {
-    const savedExpenses = localStorage.getItem('expenses');
+    const savedExpenses = localStorage.getItem('expenses-final');
     const savedBudget = localStorage.getItem('monthlyBudget');
     
     if (savedExpenses) {
@@ -20,7 +20,7 @@ export function useExpenses() {
   // Guardar gastos
   useEffect(() => {
     if (expenses.length > 0) {
-      localStorage.setItem('expenses', JSON.stringify(expenses));
+      localStorage.setItem('expenses-final', JSON.stringify(expenses));
     }
   }, [expenses]);
 
