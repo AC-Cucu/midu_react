@@ -32,3 +32,49 @@
     margin-bottom: 20px;
     font-size: 1.5rem;
 }
+
+.et-expense-form {
+    display: grid;
+    gap: 20px;
+}
+
+.et-form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.et-form-group label {
+    font-weight: 600;
+    color: #555;
+    font-size: 0.9rem;
+}
+
+.et-form-input, .et-form-select {
+    padding: 12px 16px;
+    border: 2px solid #e1e9ed;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+.et-form-input:focus, .et-form-select:focus {
+    outline: none;
+    border-color: #3498db;
+}
+
+.et-submit-btn {
+    background: #3498db;
+    color: #fff;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+}
+
+.et-submit-btn:hover {
+    background: #2980b9;
+}
