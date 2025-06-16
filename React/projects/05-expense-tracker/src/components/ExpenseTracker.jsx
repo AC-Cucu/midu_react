@@ -10,6 +10,8 @@ function ExpenseTracker () {
     // Estado para la lista de gastos
     const [expenses, setExpenses] = useState([]);
 
+
+
     useEffect(() => {
         console.log("El componente ExpenseTracker se ha renderizado");
 
@@ -115,12 +117,69 @@ function ExpenseTracker () {
         setCategory('comida');
     }
 
+    const totalExpenses = expenses.reduce((sum, expense) => sum + expense.amount, 0);
+    const expenseCount = expenses.length;
+
+    const expensesByCategory = expenses.reduce((acc, expense) => {
+        acc[expense.category] = (acc[expense.category] || 0) + expense.amount;
+        return acc;
+    }, {});
+
 
     return (
         <div className="expense-tracker">
             <header className="et-header">
                 <h1>Control de Gastos</h1>
             </header>
+
+            <section className='et-dashboard'>
+                <h2>🗒️ Resumen</h2>
+
+                <div className='et-stats-grid'>
+                    <div className='et-stat-card'>
+                        <div className='et-stat-icon'>💰</div>
+                        <div className='et-stat-info'>
+                            <h3>Total gastado</h3>
+                            <p className='et-stat-value'>€{totalExpenses.toFixed(2)}</p>
+                        </div>
+                    </div>
+                    <div className='et-stat-card'>
+                        <div className='et-stat-icon'>🧮</div>
+                        <div className='et-stat-info'>
+                            <h3>Número de gastos</h3>
+                            <p className='et-stat-value'>{expenseCount}</p>
+                        </div>
+                    </div>
+
+                    <div className='et-stat-card'>
+                        <div className='et-stat-icon'>⚖️</div>
+                        <div className='et-stat-info'>
+                            <h3>Promedio por Gasto</h3>
+                            <p className='et-stat-value'>€{expenseCount > 0 ? (totalExpenses / expenseCount).toFixed(2): '0.00'}</p>
+                        </div>
+                    </div>                    
+                </div>
+
+                {Object.keys(expensesByCategory).length > 0 && (
+                    <div className='et-category-breakdown'>
+                        <h3>Gastos por Categoría</h3>
+                        <div className='et-category-list'>
+                            {Object.entries(expensesByCategory).map(([category, amount]) => (
+                                <div key={category} className='et-category-item'>
+                                    <span className='et-category-name'>
+                                        {category === 'comida' && '🍕 Comida'}
+                                        {category === 'transporte' && '🚌 Transporte'}
+                                        {category === 'entretenimiento' && '🕹️ Entretenimiento'}
+                                        {category === 'salud' && '🏥 Salud'}
+                                        {category === 'otros' && '📑 Otros'}
+                                    </span>
+                                    <span className='et-category-amount'>€{amount.toFixed(2)}</span>
+                                </div>
+                            ))}
+                        </div>
+                    </div>
+                )}
+            </section>
 
             <main className="et-main-content">
                 <section className="et-form-section">
