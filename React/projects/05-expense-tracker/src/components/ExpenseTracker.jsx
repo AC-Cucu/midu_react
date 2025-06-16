@@ -130,7 +130,44 @@ function ExpenseTracker () {
 
                 <section className="et-list-section">
                     <h2>Lista Gastos</h2>
-                    <p>Total de gastos: {expenses.length}</p>
+
+                    {
+                        expenses.length === 0 ? 
+                        (
+                            <div className='et-no-expenses'>
+                                <p>No hay gastos registrados</p>
+                                <p>Usa el formulario de arriba para empezar</p>
+                            </div>
+                        )
+                        :
+                        (
+                            <div className='et-expenses-list'>
+                                {
+                                    expenses.map(expense => (
+                                        <div key={expense.id} className='et-expense-item'>
+                                            <div className='et-expense-info'>
+                                                <div className='et-expense-category'>
+                                                    {expense.category === 'comida' && '🍕'}
+                                                    {expense.category === 'transporte' && '🚌'}
+                                                    {expense.category === 'entretenimiento' && '🕹️'}
+                                                    {expense.category === 'salud' && '🏥'}
+                                                    {expense.category === 'otros' && '📑'}
+                                                </div>
+                                                <div className='et-expense-details'>
+                                                    <h3 className='et-expense-description'>{expense.description}</h3>
+                                                    <p className='et-expense-datetime'>{expense.date} a las {expense.time}</p>
+                                                </div>
+                                            </div>
+                                            <div className='expense-amount'>
+                                                €{expense.amount.toFixed(2)}
+                                            </div>
+                                        </div>
+                                    ))
+                                }
+                            </div>
+                        )
+                    }
+                    {/* <p>Total de gastos: {expenses.length}</p> */}
                 </section>
             </main>
         </div>
