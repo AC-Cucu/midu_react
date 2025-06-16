@@ -78,3 +78,68 @@
 .et-submit-btn:hover {
     background: #2980b9;
 }
+
+.et-no-expenses {
+    text-align: center;
+    padding: 40px 20px;
+    color: #7f8c8d;
+}
+
+.et-no-expenses p:first-child {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.et-expenses-list {
+    display: grid;
+    gap: 15px;    
+}
+
+.et-expense-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    background: #f8f9fa;
+    border-radius: 8px;
+    border-left: 4px solid #3498db;
+    transition: transform 0.2 ease, box-shadow 0.2s ease;
+}
+
+.et-expense-item:hover {
+    transform: translateX(5px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.et-expense-info {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.et-expense-category {
+    font-size: 1.5rem;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.et-expense-details h3 {
+    margin: 0 0 5px 0;
+    color: #2c3e50;
+    font-size: 1.1rem;
+}
+
+.et-expense-datetime {
+    margin: 0;
+    color: #7f8c8d;
+    font-size: 0.85rem;
+}
+
+.et-expense-amount {
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: #e74c3c;
+}
