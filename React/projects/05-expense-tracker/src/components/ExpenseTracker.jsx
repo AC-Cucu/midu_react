@@ -19,12 +19,14 @@ function ExpenseTracker () {
             <main className="et-main-content">
                 <section className="et-form-section">
                     <h2>Añadir gasto</h2>
-                    {/* Aquí irá nuestro formulario */}
+                    <p>Descripción: {description}</p>
+                    <p>Cantidad: {amount}</p>
+                    <p>Categoría: {category}</p>
                 </section>
 
                 <section className="et-list-section">
                     <h2>Lista Gastos</h2>
-                    {/* Aquí irá nuestra lista */}
+                    <p>Total de gastos: {expenses.length}</p>
                 </section>
             </main>
         </div>
