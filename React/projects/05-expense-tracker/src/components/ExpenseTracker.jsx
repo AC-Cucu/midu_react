@@ -34,6 +34,45 @@ function ExpenseTracker () {
         setCategory(valor);
     }    
 
+    const handleSubmit = (event) => {
+        // Parar la ejecución del submit
+        event.preventDefault();
+
+        // Validaciones básicas de los campos
+        if (!description.trim()) {
+            alert("Por favor, añade una descripción");
+            return;
+        }
+
+        if(!amount || amount <= 0) {
+            alert("Por favor, añade una cantidad válida.");
+            return;
+        }
+
+
+        // Crear un nuevo gasto
+        const newExpense = {
+            id: Date.now(),
+            description: description.trim(),
+            amount: parseFloat(amount),
+            category: category,
+            date: new Date().toLocaleDateString('es-ES'),
+            time: new Date().toLocaleTimeString('es-ES', {hour: '2-digit', minute: '2-digit'}),
+        }
+
+        setExpenses(prevExpenenses => [newExpense, ...prevExpenenses]);
+
+        console.log('Nuevo gasto añadido:', newExpense);
+
+        cleanForm();
+    }
+
+    const cleanForm = () => {
+        setDescription('');
+        setAmount('');
+        setCategory('comida');
+    }
+
 
     return (
         <div className="expense-tracker">
@@ -45,7 +84,7 @@ function ExpenseTracker () {
                 <section className="et-form-section">
                     <h2>Añadir gasto</h2>
 
-                    <form className='et-expense-form'>
+                    <form className='et-expense-form' onSubmit={handleSubmit}>
                         <div className='et-form-group'>
                             <label htmlFor='description'> Descipción:</label>
                             <input 
