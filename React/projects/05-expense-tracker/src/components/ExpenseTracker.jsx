@@ -1,3 +1,5 @@
+import './ExpenseTracker.css'
+
 function ExpenseTracker () {
     return (
         <div className="expense-tracker">
