@@ -1,0 +1,121 @@
+.page{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    flex-wrap: nowrap;
+    max-width: 100%;
+}
+
+.page main {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    max-width: 100%;
+}
+
+.page .form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 1rem auto;
+}
+.page header h1 {
+    color: #dbc4ff6e;
+    font-weight: 300;
+    font-family: system-ui;    
+    font-size: 4rem;
+}
+
+.page .form input {
+    width: 100%;
+    padding: 0.5rem;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+    margin-right: 0.5rem;
+}
+
+.page .form button {
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    border: none;
+    background-color: #8395ed;
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.page .movies {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 100%;
+}
+
+.page .results {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: grid;
+    gap: 1.25rem;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+}   
+
+.page .results .movie {
+    max-width: 20vw;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    background: #ffffff3d;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    align-items: stretch;
+    transition: scale 0.25s ease;
+    cursor: pointer;
+}
+
+.page .results .movie:hover {
+    scale: 1.025;
+}
+
+.movie .movie-title {
+    font-size: 1.75rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    text-align: center;
+    line-height: 1;
+}
+
+.page .results .movie .movie-link{
+    margin: auto;
+    padding: 0;
+}
+
+.page .results .movie .movie-image {
+    width: 250px;
+    height: 350px;
+    border-top-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    margin: auto;
+}
+
+.movie .movie-year {
+    padding: 2px 20px;
+    border-radius: 20px;
+    background: #8395ed;
+    color: black;
+    font-weight: 500;
+    margin: 0.5rem auto;
+}
+
+.loadingMessage {
+    font-size: 1.5rem;
+    color: #8395ed;
+    text-align: center;
+    margin-top: 2rem;
+}
